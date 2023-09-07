@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./assets/images/pngtree-medical-pharmacy-heart-healthcare-logo-vector-graphic-design-image_309769.jpg" alt="Logo">
+        </div>
+        <h2>Registrarse</h2>
+        <form id="registroForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="text" id="correo" required>
+
+            <label for="tipo">Tipo:</label>
+            <select id="tipo">
+                <option value="usuario">Usuario</option>
+                <option value="administrador">Administrador</option>
+                <option value="cliente">Cliente</option>
+            </select>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" required>
+
+            <label for="confirmarContrasena">Confirmación de Contraseña:</label>
+            <input type="password" id="confirmarContrasena" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+        <p id="errorMensaje" class="error-mensaje"></p>
+        <p id="registroMessage" class="registro-mensaje"></p>
+        <p class="q">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+     
+    </div>
+    <script src="./assets/js/registro.js"></script>
+</body>
+</html>

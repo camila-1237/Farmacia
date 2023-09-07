@@ -1,0 +1,71 @@
+body {
+    background-image: url(../images/GettyImages-1325914490.jpg);
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.l{
+    text-align: center;
+    margin-top: -40px;
+}img{
+    position: absolute;
+    top: 20px;
+    left: 350px;
+    width: 100px; /* Ancho deseado para el logo */
+    height: auto; 
+}
+
+.q{
+    margin-top: -10px;
+}
+
+
