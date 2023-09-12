@@ -25,6 +25,10 @@ label, input {
     display: block;
     margin-bottom: 10px;
 }
+h6{
+    text-align: center;
+    font-size: 20px;
+}
 
 input[type="text"], input[type="password"] {
     width: 95%;
@@ -43,10 +47,11 @@ select {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #2abe5b;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 67px;
+    border-color: #2abe5b;
     cursor: pointer;
 }
 
@@ -56,16 +61,38 @@ button:hover {
 .l{
     text-align: center;
     margin-top: -40px;
-}img{
-    position: absolute;
-    top: 20px;
-    left: 350px;
-    width: 100px; /* Ancho deseado para el logo */
-    height: auto; 
 }
+
+.logo {
+    position: relative;
+    width: 10px;
+    height: 10px; 
+}
+
+.logo img {
+    position: absolute; 
+    top: 0; 
+    left: -30px; 
+    width: 80px;
+    height: 80px;
+    margin-top: -30px;
+    border-radius: 25%;
+}
+
+
+
 
 .q{
     margin-top: -10px;
 }
+.password-input {
+    position: relative;
+}
 
+.password-input i {
+    position: absolute;
+    top: 0;
+    left: 370px;
+    margin-top: 10px;
+}
 

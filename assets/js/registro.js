@@ -1,55 +1,55 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('registroForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        
-        // Recuperar los valores del formulario
-        const nombre = document.getElementById('nombre').value;
-        const apellido = document.getElementById('apellido').value;
-        const correo = document.getElementById('correo').value;
-        const tipo = document.getElementById('tipo').value;
-        const contrasena = document.getElementById('contrasena').value;
-        const confirmarContrasena = document.getElementById('confirmarContrasena').value;
+// Manejador de eventos cuando se envía el formulario de registro
+document.getElementById('registroForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-        // Validación de contraseña y otros campos (puedes agregar más validaciones)
-        let mensajeError = '';
+    // Obtener los valores ingresados por el usuario
+    const nombre = document.getElementById('nombre').value;
+    const apellido = document.getElementById('apellido').value;
+    const correo = document.getElementById('correo').value;
+    const tipo = document.getElementById('tipo').value;
+    const contrasena = document.getElementById('contrasena').value;
+    const confirmarContrasena = document.getElementById('confirmarContrasena').value;
+    let mensajeError = '';
 
-        // Validación de correo electrónico (dominio "gmail.com")
-        const correoRegExp = /^[a-zA-Z0-9._-]+@gmail\.com$/;
-        if (!correoRegExp.test(correo)) {
-            mensajeError += 'El correo electrónico debe ser de dominio "gmail.com". ';
-        }
+    const correoRegExp = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+    if (!correoRegExp.test(correo)) {
+        mensajeError += 'El correo electrónico debe ser de dominio "gmail.com". ';
+    }
 
-        if (contrasena !== confirmarContrasena) {
-            mensajeError += 'Las contraseñas no coinciden. ';
-        }
+    if (contrasena !== confirmarContrasena) {
+        mensajeError += 'Las contraseñas no coinciden. ';
+    }
 
-        if (mensajeError) {
-            document.getElementById('errorMensaje').textContent = mensajeError;
-            document.getElementById('registroMessage').textContent = ''; // Limpiar el mensaje de éxito
-        } else {
-            // Simular almacenamiento de información de usuario (esto debe ser reemplazado por una base de datos en un entorno real)
-            const usuarioRegistrado = {
-                nombre,
-                apellido,
-                correo,
-                tipo,
-                contrasena
-            };
+    // Requerir al menos una letra mayúscula, un asterisco (*) y un número
+    const regexMayuscula = /[A-Z]/;
+    const regexAsterisco = /\*/;
+    const regexNumero = /[0-9]/;
 
-            // Simular guardar el usuario en una lista (esto debe ser reemplazado por un proceso de registro real)
-            const listaUsuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-            listaUsuarios.push(usuarioRegistrado);
-            localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
+    if (!(regexMayuscula.test(contrasena) && regexAsterisco.test(contrasena) && regexNumero.test(contrasena))) {
+        mensajeError += 'La contraseña debe contener al menos una letra mayúscula, un asterisco (*) y un número. ';
+    }
 
-            // Mostrar un mensaje de éxito
-            document.getElementById('errorMensaje').textContent = '';
-            document.getElementById('registroMessage').textContent = 'Registro exitoso. Redirigiendo a la página de inicio de sesión...';
+    if (mensajeError) {
+        document.getElementById('errorMensaje').textContent = mensajeError;
+        document.getElementById('registroMessage').textContent = ''; // Limpiar el mensaje de éxito
+    } else {
+        // Simular almacenamiento de información de usuario (esto debe ser reemplazado por una base de datos en un entorno real)
 
-            // Redirigir a la página de inicio de sesión después de un breve retraso (por ejemplo, 2 segundos)
-            setTimeout(function () {
-                window.location.href = 'login.html';
-            }, 2000);
-        }
-    });
+        // Crear un objeto de usuario
+        const usuario = {
+            nombre,
+            apellido,
+            correo,
+            tipo,
+            contrasena
+        };
+
+        // Almacenar el objeto de usuario en el almacenamiento local
+        const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+        usuariosRegistrados.push(usuario);
+        localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
+
+        // Redirigir al usuario a la página de inicio de sesión después del registro
+        window.location.href = 'login.html';
+    }
 });
-

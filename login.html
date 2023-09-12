@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <h6>Drogueria Superior A & S</h6>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/estilos.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Iniciar Sesión</title>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <img src="./assets/images/pngtree-medical-pharmacy-heart-healthcare-logo-vector-graphic-design-image_309769.jpg" alt="Logo">
+            <img src="./assets/images/ead168f2-164e-47b3-b25f-b35618170f47.jpeg" alt="Logo">
         </div>
         <h2>Iniciar Sesión</h2>
         <form id="loginForm">
@@ -18,10 +20,16 @@
             <input type="text" id="loginUsuario" required>
 
             <label for="loginContrasena">Contraseña:</label>
-            <input type="password" id="loginContrasena" required>
+            <div class="password-input">
+                <input type="password" id="loginContrasena" required>
+                <div id="verContrasena" class="ver-contrasena">
+                    <i class="fas fa-eye"></i>
+                </div>
+            </div>
 
             <button type="submit">Iniciar Sesión</button>
         </form>
+        
     </div>
     <p class="l">¿No tienes una cuenta? <a href="registro.html">Registrarse</a></p>
     <script src="./assets/js/login.js"></script>
