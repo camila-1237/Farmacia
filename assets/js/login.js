@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
     if (usuarioEncontrado) {
         // Inicio de sesión exitoso, redirigir a la página deseada (por ejemplo, 'pagina_de_inicio.html')
-        window.location.href = 'pagina_de_inicio.html';
+        window.location.href = '';
     } else {
         // Credenciales incorrectas, mostrar un mensaje de error
         document.getElementById('loginMessage').textContent = 'Credenciales incorrectas. Inténtelo nuevamente.';

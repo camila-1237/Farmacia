@@ -10,33 +10,24 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="./assets/images/ead168f2-164e-47b3-b25f-b35618170f47.jpeg" alt="Logo">
+            <img src="./assets/images/a8942576-97be-4484-94c3-cd561d94bfa5.jpeg" alt="Logo">
         </div>
         <h2>Registrarse</h2>
         <form id="registroForm">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
-
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" required>
-
-            <label for="correo">Correo Electrónico:</label>
-            <input type="text" id="correo" required>
-
-            <label for="tipo">Tipo:</label>
-            <select id="tipo">
-                <option value="usuario">Usuario</option>
-                <option value="administrador">Administrador</option>
-                <option value="cliente">Cliente</option>
-            </select>
-
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" required>
-
-            <label for="confirmarContrasena">Confirmación de Contraseña:</label>
-            <input type="password" id="confirmarContrasena" required>
-
+            <div id="errorMensaje" style="color: rgb(0, 0, 0);"></div>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <br>
+            <input type="text" id="apellido" placeholder="Apellido">
+            <br>
+            <input type="text" id="correo" placeholder="Correo electrónico">
+            <br>
+            <input type="password" id="contrasena" placeholder="Contraseña">
+            <br>
+            <input type="password" id="confirmarContrasena" placeholder="Confirmar Contraseña">
+            <br>
             <button type="submit">Registrarse</button>
+        </form>
+        
         </form>
         <p id="errorMensaje" class="error-mensaje"></p>
         <p id="registroMessage" class="registro-mensaje"></p>
